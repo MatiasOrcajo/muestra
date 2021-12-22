@@ -1,0 +1,31 @@
+// colors
+$colorPrimario: #131F3E;
+$colorCategory: #7B87A7;
+$colorRed: #FC3D61;
+
+
+// colors
+
+// fonts
+$Bold: 'Montserrat-Bold', sans-serif;
+$Light: 'Montserrat-Light', sans-serif;
+$Black: 'Montserrat-Black', sans-serif;
+$Medium: 'Montserrat-Medium', sans-serif;
+$Regular: 'Montserrat-Regular', sans-serif;
+// fonts
+
+// breakpoints
+$layout-breakpoint-960: 960px;
+$layout-breakpoint-1280: 1281px;
+$layout-breakpoint-1600: 1600px;
+$layout-breakpoint-1920: 1920px;
+$layout-breakpoint-2000: 2000px;
+// breakpoints
+
+// box shadow
+
+@mixin box-shadow($shadow: 17px){
+    box-shadow: 0px 0px $shadow #00000029;
+}
+
+// box shadow

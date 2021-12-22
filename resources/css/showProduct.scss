@@ -1,0 +1,67 @@
+.price-box{
+    @include box-shadow;
+    width: 552px;
+    border-radius: 20px;
+    height: 118px;
+}
+
+.cliente-text{
+    font-family: $Bold;
+    font-size: 31px;
+    color: $colorRed;
+}
+
+.cliente-text button{
+    background: transparent !important;
+    border-color: black !important;
+    border-radius: 50%;
+    padding: 0 !important;
+    height: 15px;
+    width: 15px;
+    font-size: 12px;
+    transform: translateY(50%);
+}
+
+.price-box{
+    font-family: $Bold;
+    font-size: 54px!important;
+    color: black!important;
+}
+
+.show-product{
+    h3{
+       font-family: $Bold;
+       font-size: 52px;
+       color: $colorRed; 
+    }
+    h1{
+        font-family: $Black;
+        font-size: 59px;
+        color: black;
+    }
+    span{
+        font-family: $Light;
+        font-size: 28px;
+        color: $colorPrimario;
+    }
+}
+
+@media(max-width: $layout-breakpoint-1600){
+    .price-box{
+        @include box-shadow;
+        width: 352px;
+        border-radius: 20px;
+        height: 90px;
+    }
+    .cliente-text{
+        font-family: $Bold;
+        font-size: 21px;
+        color: $colorRed;
+    }
+    
+    .price-box{
+        font-family: $Bold;
+        font-size: 34px!important;
+        color: black!important;
+    }
+}
