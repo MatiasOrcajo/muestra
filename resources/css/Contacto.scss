@@ -1,0 +1,66 @@
+.formulario{
+    input{
+        width: 633px;
+        height: 66px;
+        border-radius: 20px;
+        @include box-shadow;
+        padding: 10px;
+    }
+
+    input::placeholder, textarea::placeholder{
+        font-family: $Medium;
+        font-size: 21px;
+        color: #AFAFAF;
+    }
+
+    textarea{
+        border-radius: 20px;
+        @include box-shadow;
+        padding: 10px;
+    }
+
+    button{
+        width: 633px;
+        height: 77px;
+        color: white;
+        background: $colorPrimario;
+        font-family: $Black;
+        font-size: 35px;
+        border-radius: 20px;
+        @include box-shadow;
+    }
+
+
+    @media(max-width: $layout-breakpoint-1600){
+
+        input{
+            width: 533px;
+            height: 50px;
+            border-radius: 20px;
+            @include box-shadow;
+            padding: 10px;
+        }
+
+        button{
+            width: 533px;
+            height: 67px;
+            color: white;
+            background: $colorPrimario;
+            font-family: $Black;
+            font-size: 35px;
+        }
+    }
+}
+
+.contacto{
+    h3{
+        font-family: $Black;
+        font-size: 70px;
+        color: $colorPrimario;
+    }
+    p{
+        font-family: $Medium;
+        font-size: 22px;
+        color: $colorPrimario;
+    }
+}

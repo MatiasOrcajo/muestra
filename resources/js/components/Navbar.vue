@@ -1,7 +1,26 @@
 <template>
     
-    <div class="w-full" :style="image">
-        <div class="blue-filter"></div>
+    <div class="w-full text-center" :style="image">
+        <div class="blue-filter relative">
+            <div class="text-center tarifario-title absolute" style="left: 0; 
+                    right: 0; 
+                    margin-left: auto; 
+                    margin-right: auto; 
+                    width: 100%;
+                    top: 0;
+                    transform: translateY(50%);">
+                <h1>TARIFARIO <span>2021</span></h1>
+                <h5>ARANCELES DE DISEÑO, ARGENTINA, 2021</h5>
+            </div>
+            <div class="absolute flex top-0 space-x-6 mr-5 right-0 mt-5">
+                <router-link :to="{name: 'home'}">
+                    <h6 class="inicio">INICIO</h6>
+                </router-link>
+                <router-link :to="{name: 'contacto'}">
+                    <h6 class="contacto">CONTACTO</h6>
+                </router-link>
+            </div>
+        </div>
     </div>    
 
 </template>
@@ -16,6 +35,17 @@ export default {
                     width:'100%',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat'}
+        }
+    },
+    created(){
+        this.watchSize;
+    },
+    computed: {
+        watchSize: function(){
+            const x = window.innerWidth;
+            if(x > 750 && x < 1600){
+                this.image.height = '325px';
+            }
         }
     }
 }

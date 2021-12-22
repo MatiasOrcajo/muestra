@@ -108,6 +108,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -120,6 +139,18 @@ __webpack_require__.r(__webpack_exports__);
         backgroundRepeat: 'no-repeat'
       }
     };
+  },
+  created: function created() {
+    this.watchSize;
+  },
+  computed: {
+    watchSize: function watchSize() {
+      var x = window.innerWidth;
+
+      if (x > 750 && x < 1600) {
+        this.image.height = '325px';
+      }
+    }
   }
 });
 
@@ -1234,7 +1265,6 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticStyle: { padding: "0" } },
     [
       _c("Navbar"),
       _vm._v(" "),
@@ -1244,7 +1274,7 @@ var render = function () {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "grid grid-cols-12" },
+        { staticClass: "grid grid-cols-12 px-16" },
         _vm._l(_vm.menuCategories, function (category) {
           return _c(
             "router-link",
@@ -1289,11 +1319,54 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full", style: _vm.image }, [
-    _c("div", { staticClass: "blue-filter" }),
+  return _c("div", { staticClass: "w-full text-center", style: _vm.image }, [
+    _c("div", { staticClass: "blue-filter relative" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "absolute flex top-0 space-x-6 mr-5 right-0 mt-5" },
+        [
+          _c("router-link", { attrs: { to: { name: "home" } } }, [
+            _c("h6", { staticClass: "inicio" }, [_vm._v("INICIO")]),
+          ]),
+          _vm._v(" "),
+          _c("router-link", { attrs: { to: { name: "contacto" } } }, [
+            _c("h6", { staticClass: "contacto" }, [_vm._v("CONTACTO")]),
+          ]),
+        ],
+        1
+      ),
+    ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "text-center tarifario-title absolute",
+        staticStyle: {
+          left: "0",
+          right: "0",
+          "margin-left": "auto",
+          "margin-right": "auto",
+          width: "100%",
+          top: "0",
+          transform: "translateY(50%)",
+        },
+      },
+      [
+        _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2021")])]),
+        _vm._v(" "),
+        _c("h5", [_vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2021")]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
@@ -1318,7 +1391,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "md:px-8" },
+    { staticClass: "md:px-16" },
     _vm._l(_vm.categories, function (category) {
       return _c(
         "div",

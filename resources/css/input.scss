@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './showProduct.scss';
+@import './Contacto.scss';
 
 
 // navbar
@@ -10,6 +11,48 @@
   background: $colorPrimario;
   opacity: .9;
 }
+
+.tarifario-title{
+  h1{
+    font-family: $Black;
+    font-size: 100px;
+    color: white;
+  }
+
+  h1 span{
+    font-family: $Regular !important;
+    font-size: 100px;
+    color: white;
+  }
+
+  h5{
+    font-family: $Regular;
+    font-size: 37px;
+    color: $colorRed;
+  }
+}
+
+.inicio{
+  font-family: $Black;
+  font-size: 28px;
+  color: white;
+}
+.contacto{
+  font-family: $Medium;
+  font-size: 28px;
+  color: white;
+}
+
+@media(max-width: $layout-breakpoint-1600){
+  .inicio{
+    font-size: 21px;
+  }
+  .contacto{
+    font-size: 21px;
+  }
+  
+}
+
 
 // navbar
 
