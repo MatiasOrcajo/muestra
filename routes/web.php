@@ -14,10 +14,6 @@ use App\Mail\ContactoMailable;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/api/products', 'App\Http\Controllers\ProductController@index')->name('product.index');
 Route::get('/api/categorias', 'App\Http\Controllers\ProductController@getCategories')->name('product.getCategories');
 Route::get('/api/categoria/{id?}', 'App\Http\Controllers\ProductController@showCategory')->name('category.showCategory');
@@ -25,9 +21,13 @@ Route::get('/api/producto/{slug?}', 'App\Http\Controllers\ProductController@show
 
 Route::post('/api/contact', 'App\Http\Controllers\ProductController@store');
 
-Route::get('/panel/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
+        Route::get('/dashboard', 'App\Http\Controllers\AdminController@index')->name('dashboard');
+});
+
+// Route::get('/panel/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
