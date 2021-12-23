@@ -1,5 +1,6 @@
 <template>
     <div>
+        <NavbarSecondary/>
         <h2 class="text-center categories-h2">CATEGORIA</h2>
         <div class="grid grid-cols-12 px-16">
             <router-link class="uppercase category-box m-2 p-2 md:col-span-3" :to="{name: 'showCategory', params: {slug: category.slug}}"
@@ -14,10 +15,12 @@
 <script>
 
 import Category from '../components/categories/Category.vue';
+import NavbarSecondary from './NavbarSecondary.vue';
 
 export default {
     components: {
       Category,
+      NavbarSecondary
     },
     data(){
         return{

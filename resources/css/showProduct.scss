@@ -46,6 +46,12 @@
     }
 }
 
+.show-product-p{
+    font-family: $Light;
+    font-size: 22px;
+    color: #A5A5A5;
+}
+
 @media(max-width: $layout-breakpoint-1600){
     .price-box{
         @include box-shadow;

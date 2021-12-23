@@ -125,6 +125,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -1388,12 +1392,37 @@ var render = function () {
         ),
       ]),
       _vm._v(" "),
-      _c("div", {}),
+      _vm._m(0),
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex justify-center mt-12 show-product-p" },
+      [
+        _c("p", { staticClass: "w-1/2 text-center" }, [
+          _vm._v(
+            "\n            Si te preguntabas cuando cobrar por una tarea de diseño, o buscabas un tarifario de diseño gráfico en esta pagina encontrarás la información que buscas. "
+          ),
+          _c("br"),
+          _c("br"),
+          _vm._v(
+            "\n            Recordá que los aranceles que listamos son montos orientativos para ayudar tanto a profesionales a presupuestar y cobrar por su trabajo, como a clientes que buscan saber cuanto deberían pagar por los mismos. Cada proyecto debe ser presupuestado basado en sus requerimientos, por lo que esta lista de precios debe ser tomada como una referencia orientativa. "
+          ),
+          _c("br"),
+          _c("br"),
+          _vm._v("\n            Esperamos que te sea de utilidad.\n        "),
+        ]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
