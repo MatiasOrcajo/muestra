@@ -17,7 +17,7 @@
                     <h6 class="inicio">INICIO</h6>
                 </router-link>
                 <router-link :to="{name: 'contacto'}">
-                    <h6 class="contacto">CONTACTO</h6>
+                    <h6 class="contacto">CONSULTAS</h6>
                 </router-link>
             </div>
         </div>

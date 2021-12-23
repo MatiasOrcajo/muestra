@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ContactoMailable;
+use Illuminate\Support\Facades\Mail;
+
 
 use App\Models\{Categories, Products, Texts};
 
@@ -34,5 +37,14 @@ class ProductController extends Controller
                     'texts'=>$texts];
 
         return response()->json($object);
+    }
+
+    public function store(Request $request) 
+    {
+        
+        $correo = new ContactoMailable($request->all());
+        Mail::to('matiasorcajo3@gmail.com')->send($correo);
+
+        return "Mensaje Enviado";
     }
 }

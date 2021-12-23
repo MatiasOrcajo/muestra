@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\ContactoMailable;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/api/products', 'App\Http\Controllers\ProductController@index')->nam
 Route::get('/api/categorias', 'App\Http\Controllers\ProductController@getCategories')->name('product.getCategories');
 Route::get('/api/categoria/{id?}', 'App\Http\Controllers\ProductController@showCategory')->name('category.showCategory');
 Route::get('/api/producto/{slug?}', 'App\Http\Controllers\ProductController@showProduct')->name('product.showProduct');
+
+Route::post('/api/contact', 'App\Http\Controllers\ProductController@store');
 
 Route::get('/panel/dashboard', function () {
     return view('dashboard');

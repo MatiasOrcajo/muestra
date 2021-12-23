@@ -57,6 +57,7 @@
         font-family: $Black;
         font-size: 70px;
         color: $colorPrimario;
+        line-height: 70px;
     }
     p{
         font-family: $Medium;
@@ -64,3 +65,73 @@
         color: $colorPrimario;
     }
 }
+
+// navbar contacto
+
+.navbar-secondary{
+    .blue-filter{
+        height: 100%;
+        width: 100%;
+        background: $colorPrimario;
+        opacity: .9;
+      }
+      
+    .tarifario-title{
+        h1{
+            font-family: $Black;
+            font-size: 53px;
+            color: white;
+        }
+        
+        h1 span{
+            font-family: $Regular !important;
+            font-size: 19px;
+            color: white;
+        }
+        
+        h5{
+            font-family: $Regular;
+            font-size: 19px;
+            color: $colorRed;
+        }
+    }
+    
+    .inicio{
+        font-family: $Medium;
+        font-size: 28px;
+        color: white;
+    }
+    .contacto{
+        font-family: $Medium;
+        font-size: 28px;
+        color: white;
+    }
+    
+    @media(max-width: $layout-breakpoint-1600){
+        .inicio{
+            font-size: 21px;
+        }
+        .contacto{
+            font-size: 21px;
+        }
+        .tarifario-title{
+            h1{
+                font-family: $Black;
+                font-size: 43px;
+                color: white;
+            }
+            
+            h1 span{
+                font-family: $Regular !important;
+                font-size: 43px;
+                color: white;
+            }
+        }
+    
+    }
+      
+}
+  
+
+
+// navbar contacto

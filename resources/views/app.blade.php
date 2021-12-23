@@ -28,6 +28,7 @@
             routes['product-getCategories']='{{route('product.getCategories')}}'; 
             routes['category-showCategory']='{{route('category.showCategory')}}';
             routes['product-showProduct']='{{route('product.showProduct')}}';
+            
     </script>
     
     <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>

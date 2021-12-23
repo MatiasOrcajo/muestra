@@ -1332,7 +1332,7 @@ var render = function () {
           ]),
           _vm._v(" "),
           _c("router-link", { attrs: { to: { name: "contacto" } } }, [
-            _c("h6", { staticClass: "contacto" }, [_vm._v("CONTACTO")]),
+            _c("h6", { staticClass: "contacto" }, [_vm._v("CONSULTAS")]),
           ]),
         ],
         1

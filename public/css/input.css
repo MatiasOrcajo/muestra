@@ -123,11 +123,62 @@
   font-family: "Montserrat-Black", sans-serif;
   font-size: 70px;
   color: #131F3E;
+  line-height: 70px;
 }
 .contacto p {
   font-family: "Montserrat-Medium", sans-serif;
   font-size: 22px;
   color: #131F3E;
+}
+
+.navbar-secondary .blue-filter {
+  height: 100%;
+  width: 100%;
+  background: #131F3E;
+  opacity: 0.9;
+}
+.navbar-secondary .tarifario-title h1 {
+  font-family: "Montserrat-Black", sans-serif;
+  font-size: 53px;
+  color: white;
+}
+.navbar-secondary .tarifario-title h1 span {
+  font-family: "Montserrat-Regular", sans-serif !important;
+  font-size: 19px;
+  color: white;
+}
+.navbar-secondary .tarifario-title h5 {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 19px;
+  color: #FC3D61;
+}
+.navbar-secondary .inicio {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 28px;
+  color: white;
+}
+.navbar-secondary .contacto {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 28px;
+  color: white;
+}
+@media (max-width: 1600px) {
+  .navbar-secondary .inicio {
+    font-size: 21px;
+  }
+  .navbar-secondary .contacto {
+    font-size: 21px;
+  }
+  .navbar-secondary .tarifario-title h1 {
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 43px;
+    color: white;
+  }
+  .navbar-secondary .tarifario-title h1 span {
+    font-family: "Montserrat-Regular", sans-serif !important;
+    font-size: 43px;
+    color: white;
+  }
 }
 
 .blue-filter {
