@@ -251,19 +251,19 @@
 							<h4 class="text-section">Menu</h4>
 						</li>
 						<li class="nav-item">
-							<a data-toggle="collapse" href="{{route('dashboard.categories')}}">
+							<a href="{{route('dashboard.categories')}}">
 								<i class="fas fa-layer-group"></i>
 								<p>Categorias</p>
 							</a>
 						</li>
                         <li class="nav-item">
-							<a data-toggle="collapse" href="#base">
+							<a href="{{route('dashboard.products')}}">
 								<i class="fas fa-layer-group"></i>
 								<p>Productos</p>
 							</a>
 						</li>
                         <li class="nav-item">
-							<a data-toggle="collapse" href="#base">
+							<a href="#base">
 								<i class="fas fa-layer-group"></i>
 								<p>Textos</p>
 							</a>

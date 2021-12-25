@@ -37,6 +37,21 @@ class AdminController extends Controller
         return view('category', compact('products', 'category'));
     }
 
+    public function deleteCategory(Categories $category)
+    {
+        $category->delete();
+        return redirect()->back();
+    }
+
+    public function editCategory(Request $request, Categories $category)
+    {
+        $category->title = $request->title;
+        $category->slug = $request->slug;
+        $category->save();
+
+        return redirect()->back();
+    }
+
     public function editProduct($slug)
     {
         $product = Products::where('slug', $slug)->first();
@@ -80,5 +95,11 @@ class AdminController extends Controller
         $product->save();
 
         return redirect()->back();
+    }
+
+    public function products()
+    {
+        $products = Products::all();
+        return view('products', compact('products'));
     }
 }
