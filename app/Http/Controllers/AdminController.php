@@ -102,4 +102,38 @@ class AdminController extends Controller
         $products = Products::all();
         return view('products', compact('products'));
     }
+
+    public function texts()
+    {
+        $texts = Texts::all();
+        return view('texts', compact('texts'));
+    }
+
+    public function createTexts(Request $request)
+    {
+        $text = new Texts;
+
+        $text->cliente_a = $request->cliente_a;
+        $text->cliente_b = $request->cliente_b;
+        $text->cliente_c = $request->cliente_c;
+
+        $text->save();
+
+        return redirect()->back();
+    }
+
+    public function editTexts(Request $request)
+    {
+        $text = Texts::first();
+
+        $text->cliente_a = $request->cliente_a;
+        $text->cliente_b = $request->cliente_b;
+        $text->cliente_c = $request->cliente_c;
+
+        $text->save();
+
+        return redirect()->back();
+    }
+
+
 }

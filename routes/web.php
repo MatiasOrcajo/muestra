@@ -33,6 +33,9 @@ Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
         Route::post('/update-product', 'App\Http\Controllers\AdminController@updateProduct')->name('dashboard.update.product');
         Route::delete('/delete-product/{product}', 'App\Http\Controllers\AdminController@deleteProduct')->name('dashboard.delete.product');
         Route::post('/create-product', 'App\Http\Controllers\AdminController@createProduct')->name('dashboard.create.product');
+        Route::get('/texts', 'App\Http\Controllers\AdminController@texts')->name('dashboard.texts');
+        Route::post('/create-texts', 'App\Http\Controllers\AdminController@createTexts')->name('dashboard.create.texts');
+        Route::post('/edit-texts', 'App\Http\Controllers\AdminController@editTexts')->name('dashboard.edit.texts');
         
 });
 
