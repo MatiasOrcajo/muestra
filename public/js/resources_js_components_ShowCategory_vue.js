@@ -1380,7 +1380,7 @@ var render = function () {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "grid grid-cols-12 px-2 md:px-16" },
+        { staticClass: "grid grid-cols-12 padding-x-responsive" },
         _vm._l(_vm.menuCategories, function (category) {
           return _c(
             "router-link",
@@ -1430,7 +1430,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "px-2 md:px-16" }, [
+  return _c("div", { staticClass: "padding-x-responsive" }, [
     _c(
       "div",
       { key: _vm.category.id, staticClass: "my-10 cuadro-categoria" },

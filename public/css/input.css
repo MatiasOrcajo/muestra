@@ -241,6 +241,15 @@
   }
 }
 
+.padding-x-responsive {
+  padding: 0 6% 0 6%;
+}
+
+@media (max-width: 960px) {
+  .padding-x-responsive {
+    padding: 0 2% 0 2%;
+  }
+}
 .blue-filter {
   height: 100%;
   width: 100%;

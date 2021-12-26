@@ -4,6 +4,17 @@
 @import './admin.scss';
 
 
+.padding-x-responsive{
+  padding: 0 6% 0 6%;
+}
+
+@media(max-width: $layout-breakpoint-960){
+  .padding-x-responsive{
+    padding: 0 2% 0 2%;
+  }
+}
+
+
 // navbar
 
 .blue-filter{

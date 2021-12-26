@@ -1,5 +1,5 @@
 <template>
-    <div class="px-2 md:px-16">
+    <div class="padding-x-responsive">
         <div :key="category.id" class="my-10 cuadro-categoria">
             <h1 class="uppercase category-title">{{category.title}}</h1>
             <div class="grid grid-cols-12 mt-3 barra-descripcion p-4 " style="box-shadow: 0 0 13px #00000029">
