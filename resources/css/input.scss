@@ -54,6 +54,28 @@
   
 }
 
+@media(max-width: $layout-breakpoint-960){
+  .tarifario-title{
+    h1{
+      font-family: $Black;
+      font-size: 50px;
+      color: white;
+    }
+  
+    h1 span{
+      font-family: $Regular !important;
+      font-size: 50px;
+      color: white;
+    }
+  
+    h5{
+      font-family: $Regular;
+      font-size: 21px;
+      color: $colorRed;
+    }
+  }
+}
+
 
 // navbar
 
@@ -118,8 +140,25 @@
     }
   }
 
-  
+  @media(max-width: $layout-breakpoint-960){
+    .bold-title{
+      font-family: $Bold;
+      font-size: 8px;
+      color: white;
+    }
 
+    .aclaracion-title{
+      font-family: $Light;
+      font-size: 10px;
+      color: white;
+    }
+
+    .consultar-title{
+      font-family: $Medium;
+      font-size: 10px;
+      color: white;
+    }
+  }
 }
 
  // categorias
@@ -177,8 +216,16 @@
 @media(max-width: $layout-breakpoint-1600){
   .category-box{
     font-size: 30px;
-    min-width: 300px;
-    min-height: 120px;
+    min-width: 250px;
+    min-height: 100px;
+  }
+}
+
+@media(max-width: $layout-breakpoint-960){
+  .category-box{
+    font-size: 30px;
+    min-width: 95%;
+    min-height: 50px;
   }
 }
 // categorias

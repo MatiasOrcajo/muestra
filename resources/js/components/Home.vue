@@ -2,8 +2,8 @@
     <div>
         <Navbar/>
         <h2 class="text-center categories-h2">CATEGORIA</h2>
-        <div class="grid grid-cols-12 px-16">
-            <router-link class="uppercase category-box m-2 p-2 md:col-span-3" :to="{name: 'showCategory', params: {slug: category.slug}}" :key="category.id" v-for="category in menuCategories">
+        <div class="grid grid-cols-12 px-2 md:px-16">
+            <router-link class="uppercase category-box m-2 p-2 col-span-12 md:col-span-3" :to="{name: 'showCategory', params: {slug: category.slug}}" :key="category.id" v-for="category in menuCategories">
                   {{category.title}}
             </router-link>
         </div>

@@ -231,6 +231,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1366,13 +1380,14 @@ var render = function () {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "grid grid-cols-12 px-16" },
+        { staticClass: "grid grid-cols-12 px-2 md:px-16" },
         _vm._l(_vm.menuCategories, function (category) {
           return _c(
             "router-link",
             {
               key: category.id,
-              staticClass: "uppercase category-box m-2 p-2 md:col-span-3",
+              staticClass:
+                "uppercase category-box m-2 p-2 col-span-12 md:col-span-3",
               class:
                 category.slug == _vm.$route.params.slug
                   ? "category-box-active"
@@ -1415,7 +1430,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "px-16" }, [
+  return _c("div", { staticClass: "px-2 md:px-16" }, [
     _c(
       "div",
       { key: _vm.category.id, staticClass: "my-10 cuadro-categoria" },
@@ -1439,7 +1454,7 @@ var render = function () {
             [
               _c(
                 "div",
-                { staticClass: "col-span-6" },
+                { staticClass: "col-span-6 md:col-span-5" },
                 [
                   _c(
                     "router-link",
@@ -1469,7 +1484,10 @@ var render = function () {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "col-span-2 flex items-center align-center" },
+                {
+                  staticClass:
+                    "col-span-3 md:col-span-3 flex items-center align-center",
+                },
                 [
                   product.subtitle
                     ? _c(
@@ -1488,7 +1506,7 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "col-span-1 flex items-center justify-center bold-title",
+                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
                   staticStyle: { color: "#131F3E" },
                 },
                 [
@@ -1502,7 +1520,7 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "col-span-1 flex items-center justify-center bold-title",
+                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
                   staticStyle: { color: "#131F3E" },
                 },
                 [
@@ -1516,7 +1534,7 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "col-span-1 flex items-center justify-center bold-title",
+                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
                   staticStyle: { color: "#131F3E" },
                 },
                 [
@@ -1547,34 +1565,50 @@ var staticRenderFns = [
         staticStyle: { "box-shadow": "0 0 13px #00000029" },
       },
       [
-        _c("div", { staticClass: "col-span-6 bold-title" }, [
+        _c("div", { staticClass: "col-span-6 md:col-span-5 bold-title" }, [
           _c("h1", {}, [_vm._v("Descripción")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-span-2 aclaracion-title" }, [
-          _c("h1", {}, [_vm._v("Aclaración")]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-span-1 bold-title" }, [
-          _vm._v("\n            CLIENTE A\n            "),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-span-1 bold-title" }, [
-          _vm._v("\n            CLIENTE B\n            "),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-span-1 bold-title" }, [
-          _vm._v("\n            CLIENTE C\n            "),
         ]),
         _vm._v(" "),
         _c(
           "div",
-          {
-            staticClass:
-              "col-span-1 consultar-title flex justify-center consultar-title",
-          },
-          [_vm._v("\n            Consultar\n            ")]
+          { staticClass: "col-span-3 md:col-span-3 aclaracion-title" },
+          [_c("h1", {}, [_vm._v("Aclaración")])]
         ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-span-1 md:col-span-1 bold-title" }, [
+          _c("div", { staticClass: "hidden md:block bold-title" }, [
+            _vm._v("\n              CLIENTE A\n            "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "block md:hidden bold-title" }, [
+            _vm._v("\n              A\n            "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-span-1 md:col-span-1 bold-title" }, [
+          _c("div", { staticClass: "hidden md:block bold-title" }, [
+            _vm._v("\n              CLIENTE B\n            "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "block md:hidden bold-title" }, [
+            _vm._v("\n              B\n            "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-span-1 md:col-span-1 bold-title" }, [
+          _c("div", { staticClass: "hidden md:block bold-title" }, [
+            _vm._v("\n              CLIENTE C\n            "),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "block md:hidden bold-title" }, [
+            _vm._v("\n              C\n            "),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", {
+          staticClass:
+            "hidden md:block col-span-2 md:col-span-1 consultar-title flex justify-center consultar-title",
+        }),
       ]
     )
   },
@@ -1584,7 +1618,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "col-span-1 flex items-center justify-center" },
+      {
+        staticClass:
+          "hidden md:block col-span-2 md:col-span-1 flex items-center justify-center",
+      },
       [
         _c(
           "a",

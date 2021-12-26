@@ -124,7 +124,30 @@
     font-size: 35px;
   }
 }
+@media (max-width: 960px) {
+  .formulario input {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 17px #00000029;
+    padding: 10px;
+  }
+  .formulario button {
+    width: 100%;
+    height: 67px;
+    color: white;
+    background: #131F3E;
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 35px;
+  }
+}
 
+@media (max-width: 960px) {
+  .formulario {
+    width: 100% !important;
+    padding: 10px;
+  }
+}
 .contacto h3 {
   font-family: "Montserrat-Black", sans-serif;
   font-size: 70px;
@@ -137,6 +160,19 @@
   color: #131F3E;
 }
 
+@media (max-width: 960px) {
+  .contacto h3 {
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 40px;
+    color: #131F3E;
+    line-height: 40px;
+  }
+  .contacto p {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 22px;
+    color: #131F3E;
+  }
+}
 .navbar-secondary .blue-filter {
   height: 100%;
   width: 100%;
@@ -186,6 +222,24 @@
     color: white;
   }
 }
+@media (max-width: 960px) {
+  .navbar-secondary .inicio {
+    font-size: 15px;
+  }
+  .navbar-secondary .contacto {
+    font-size: 15px;
+  }
+  .navbar-secondary .tarifario-title h1 {
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 21px;
+    color: white;
+  }
+  .navbar-secondary .tarifario-title h1 span {
+    font-family: "Montserrat-Regular", sans-serif !important;
+    font-size: 21px;
+    color: white;
+  }
+}
 
 .blue-filter {
   height: 100%;
@@ -229,6 +283,23 @@
 
   .contacto {
     font-size: 21px;
+  }
+}
+@media (max-width: 960px) {
+  .tarifario-title h1 {
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 50px;
+    color: white;
+  }
+  .tarifario-title h1 span {
+    font-family: "Montserrat-Regular", sans-serif !important;
+    font-size: 50px;
+    color: white;
+  }
+  .tarifario-title h5 {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size: 21px;
+    color: #FC3D61;
   }
 }
 .cuadro-categoria .barra-descripcion {
@@ -277,6 +348,23 @@
 .cuadro-categoria .aclaracion-title,
 .cuadro-categoria .consultar-title {
     font-size: 16px;
+  }
+}
+@media (max-width: 960px) {
+  .cuadro-categoria .bold-title {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 8px;
+    color: white;
+  }
+  .cuadro-categoria .aclaracion-title {
+    font-family: "Montserrat-Light", sans-serif;
+    font-size: 10px;
+    color: white;
+  }
+  .cuadro-categoria .consultar-title {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 10px;
+    color: white;
   }
 }
 
@@ -333,7 +421,14 @@
 @media (max-width: 1600px) {
   .category-box {
     font-size: 30px;
-    min-width: 300px;
-    min-height: 120px;
+    min-width: 250px;
+    min-height: 100px;
+  }
+}
+@media (max-width: 960px) {
+  .category-box {
+    font-size: 30px;
+    min-width: 95%;
+    min-height: 50px;
   }
 }
