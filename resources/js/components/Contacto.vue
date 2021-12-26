@@ -18,6 +18,7 @@
             <p class="text-center block mb-0 mt-5 hidden show-on-click">
                 Nos pondremos en contacto a la brevedad.
             </p>
+            
 
 
             <form @submit.prevent="send" class="formulario mt-12 hide-on-click">

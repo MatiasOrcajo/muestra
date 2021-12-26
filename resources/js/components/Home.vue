@@ -11,6 +11,7 @@
     </div>
 </template>
 
+
 <script>
 
 import Products from '../components/products/Products.vue';

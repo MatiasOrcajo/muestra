@@ -1,4 +1,5 @@
 <template>
+
     <div class="padding-x-responsive">
         <div :key="category.id" class="my-10 cuadro-categoria " v-for="category in categories">
           <h1 class="uppercase category-title">{{category.title}}</h1>
