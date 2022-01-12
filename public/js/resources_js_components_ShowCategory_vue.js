@@ -245,6 +245,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1307,8 +1309,10 @@ var render = function () {
             },
             [
               _c("router-link", { attrs: { to: { name: "home" } } }, [
-                _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2021")])]),
+                _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2022")])]),
               ]),
+              _vm._v(" "),
+              _c("h5", [_vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2022")]),
             ],
             1
           ),
@@ -1544,7 +1548,28 @@ var render = function () {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(1, true),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "hidden md:block col-span-2 md:col-span-1 flex items-center justify-center",
+                },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "consultar-title",
+                      staticStyle: {
+                        "text-decoration": "underline",
+                        color: "#131F3E",
+                      },
+                      attrs: { to: { name: "contacto" } },
+                    },
+                    [_vm._v("\n                Consultar\n              ")]
+                  ),
+                ],
+                1
+              ),
             ]
           )
         }),
@@ -1609,29 +1634,6 @@ var staticRenderFns = [
           staticClass:
             "hidden md:block col-span-2 md:col-span-1 consultar-title flex justify-center consultar-title",
         }),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "hidden md:block col-span-2 md:col-span-1 flex items-center justify-center",
-      },
-      [
-        _c(
-          "a",
-          {
-            staticClass: "consultar-title",
-            staticStyle: { "text-decoration": "underline", color: "#131F3E" },
-            attrs: { href: "" },
-          },
-          [_vm._v("Consultar")]
-        ),
       ]
     )
   },

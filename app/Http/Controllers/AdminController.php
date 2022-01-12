@@ -25,6 +25,7 @@ class AdminController extends Controller
         $category = new Categories;
         $category->title = $request->title;
         $category->slug = $request->slug;
+        $category->order = $request->order;
 
         $category->save();
 
@@ -45,8 +46,10 @@ class AdminController extends Controller
 
     public function editCategory(Request $request, Categories $category)
     {
+        // dd($category, $request->title);
         $category->title = $request->title;
         $category->slug = $request->slug;
+        $category->order = $request->order;
         $category->save();
 
         return redirect()->back();

@@ -72,15 +72,20 @@
                                         <label for="">Slug</label>
                                         <input type="text" name="slug" class="form-control" value="{{$category->slug}}">
                                     </div>
+                                    <div class="form-group">
+                                        <label for="">Orden</label>
+                                        <input type="number" name="order" class="form-control" value="{{$category->order}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">
+                                            Volver
+                                        </button>
+                                        <button type="submit" class="btn btn-success">
+                                            Actualizar
+                                        </button>
+                                    </div>
                                 </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">
-                                        Volver
-                                    </button>
-                                    <button type="submit" class="btn btn-success" form="edit_category_form">
-                                        Actualizar
-                                    </button>
                                 </div>
                             </div>
                             
@@ -115,6 +120,9 @@
             </div>
             <div class="form-group">
                 <input type="text" name="slug" class="form-control" placeholder="Slug">
+            </div>
+            <div class="form-group">
+                <input type="number" name="order" class="form-control" placeholder="01">
             </div>
             <button type="submit" class="btn btn-primary">Save changes</button>
           </form>

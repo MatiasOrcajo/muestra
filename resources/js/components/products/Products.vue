@@ -40,7 +40,6 @@
 
             <div :key="product.id" v-for="(product, index) in category.products" class="p-4 grid grid-cols-12 cuadro-producto" v-bind:style= "index % 2 == 0 ?  'background: white' : 'background: #F5F5F5'" style="box-shadow: 0 0 13px #00000029">
               <div class="col-span-6 md:col-span-5">
-
                 <router-link class="py-0 flex items-center" :to="{ name: 'showProduct', params: { slug: product.slug } }">
                   <h1 class="bold-title" style="color: #131F3E">{{product.title}}</h1>
                 </router-link>
@@ -58,7 +57,9 @@
                   {{product.C}}
               </div>
               <div class="hidden md:block col-span-2 md:col-span-1 flex items-center justify-center">
-                  <a href="" class="consultar-title" style="text-decoration: underline; color: #131F3E">Consultar</a>
+                  <router-link :to="{name: 'contacto'}" class="consultar-title" style="text-decoration: underline; color: #131F3E">
+                    Consultar
+                  </router-link>
               </div>
             </div>
           </div>

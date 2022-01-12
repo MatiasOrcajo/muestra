@@ -57,7 +57,9 @@
                     {{product.C}}
                 </div>
                 <div class="hidden md:block col-span-2 md:col-span-1 flex items-center justify-center">
-                    <a href="" class="consultar-title" style="text-decoration: underline; color: #131F3E">Consultar</a>
+                  <router-link :to="{name: 'contacto'}" class="consultar-title" style="text-decoration: underline; color: #131F3E">
+                    Consultar
+                  </router-link>
                 </div>
             </div>
         </div>
