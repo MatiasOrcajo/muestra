@@ -366,17 +366,17 @@ body {
 @media (max-width: 960px) {
   .cuadro-categoria .bold-title {
     font-family: "Montserrat-Bold", sans-serif;
-    font-size: 8px;
+    font-size: 7px;
     color: white;
   }
   .cuadro-categoria .aclaracion-title {
     font-family: "Montserrat-Light", sans-serif;
-    font-size: 10px;
+    font-size: 7px;
     color: white;
   }
   .cuadro-categoria .consultar-title {
     font-family: "Montserrat-Medium", sans-serif;
-    font-size: 10px;
+    font-size: 7px;
     color: white;
   }
 }

@@ -48,13 +48,13 @@
                 <h1 class="aclaracion-title" style="color: #131F3E;" v-if="product.subtitle">{{product.subtitle}}</h1>
               </div>
               <div class="col-span-1 md:col-span-1 flex items-center justify-center bold-title" style="color: #131F3E">
-                  {{product.A}}
+                  ${{product.A}}
               </div>
               <div class="col-span-1 md:col-span-1 flex items-center justify-center bold-title" style="color: #131F3E">
-                  {{product.B}}
+                  ${{product.B}}
               </div>
               <div class="col-span-1 md:col-span-1 flex items-center justify-center bold-title" style="color: #131F3E">
-                  {{product.C}}
+                  ${{product.C}}
               </div>
               <div class="hidden md:block col-span-2 md:col-span-1 flex items-center justify-center">
                   <router-link :to="{name: 'contacto'}" class="consultar-title" style="text-decoration: underline; color: #131F3E">

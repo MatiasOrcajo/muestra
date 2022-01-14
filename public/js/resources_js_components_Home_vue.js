@@ -1491,7 +1491,7 @@ var render = function () {
                   },
                   [
                     _vm._v(
-                      "\n              " + _vm._s(product.A) + "\n          "
+                      "\n              $" + _vm._s(product.A) + "\n          "
                     ),
                   ]
                 ),
@@ -1505,7 +1505,7 @@ var render = function () {
                   },
                   [
                     _vm._v(
-                      "\n              " + _vm._s(product.B) + "\n          "
+                      "\n              $" + _vm._s(product.B) + "\n          "
                     ),
                   ]
                 ),
@@ -1519,7 +1519,7 @@ var render = function () {
                   },
                   [
                     _vm._v(
-                      "\n              " + _vm._s(product.C) + "\n          "
+                      "\n              $" + _vm._s(product.C) + "\n          "
                     ),
                   ]
                 ),
