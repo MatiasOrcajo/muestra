@@ -34,7 +34,7 @@
 			<!-- Logo Header -->
 			<!-- End Logo Header -->
 			<div class="logo-header">
-					<a href="index.html" class="logo d-none d-lg-block" style="color: white">
+					<a href="{{route('dashboard')}}" class="logo d-none d-lg-block" style="color: white">
 						TARIFARIO ADMIN
 					</a>
 					<div class="d-flex d-lg-none">
@@ -66,6 +66,7 @@
 								<span>
 									{{Auth::user()->name}}
 									<span class="user-level">Administrador</span>
+                                  
 								</span>
 							</a>
 							<div class="clearfix"></div>
@@ -102,6 +103,14 @@
 								<p>SEO</p>
 							</a>
 						</li>
+                        
+                        <li class="nav-item">
+							<a href="{{route('dashboard.seo')}}">
+								<i class="fas fa-layer-group"></i>
+								  <a href="{{route('dashboard.logout')}}"> Salir </a>   
+							</a>
+						</li>
+                        
 					</ul>
 				</div>
 			</div>

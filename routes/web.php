@@ -39,6 +39,7 @@ Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
         Route::post('/edit-texts', 'App\Http\Controllers\AdminController@editTexts')->name('dashboard.edit.texts');
         Route::get('/seo', 'App\Http\Controllers\AdminController@seoGlobal')->name('dashboard.seo');
         Route::post('/add-seo', 'App\Http\Controllers\AdminController@addSeoGlobal')->name('dashboard.add.seo');
+        Route::get('/logout', 'App\Http\Controllers\AdminController@logout')->name('dashboard.logout');
         
 });
 
@@ -55,8 +56,6 @@ Route::get('{any}', function(){
 
     return view('app', compact('head', 'body'));
 })->where('any', '.*');
-
-
 
 
 // Route::get('/api/products', 'App\Http\Controllers\ProductController@index');

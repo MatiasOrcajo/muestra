@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{-- @dd(url('/')) --}}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @if($head)
+    @if($head && !\Illuminate\Support\Facades\Auth::user())
         {!!$head!!}
     @endif
     <title>{{env('APP_NAME')}}</title>
@@ -33,10 +32,12 @@
             routes['category-showCategory']='{{route('category.showCategory')}}';
             routes['product-showProduct']='{{route('product.showProduct')}}';
             
+        var loggued = {{\Illuminate\Support\Facades\Auth::user() ? '1':'0'}};
+        
     </script>
     
     <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
-    @if($body)
+    @if($body && !\Illuminate\Support\Facades\Auth::user())
         {!!$body!!}
     @endif
 </body>

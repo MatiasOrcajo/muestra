@@ -164,5 +164,11 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
+    
+    public function logout()
+    {
+        \Illuminate\Support\Facades\Auth::logout();
+        return redirect()->route('login');
+    }
 
 }
