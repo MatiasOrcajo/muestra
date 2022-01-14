@@ -1227,8 +1227,10 @@ var render = function () {
             },
             [
               _c("router-link", { attrs: { to: { name: "home" } } }, [
-                _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2021")])]),
+                _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2022")])]),
               ]),
+              _vm._v(" "),
+              _c("h5", [_vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2022")]),
             ],
             1
           ),

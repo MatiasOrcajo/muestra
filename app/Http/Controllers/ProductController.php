@@ -13,13 +13,14 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $categories = Categories::with('products')->get();
+        $categories = Categories::with('products')->orderBy('order')->get();
+        dd($categories);
         return response()->json($categories);
     }
 
     public function getCategories()
     {
-        $getCategories = Categories::all();
+        $getCategories = Categories::orderBy('order')->get();
         return response()->json($getCategories);
     }
 

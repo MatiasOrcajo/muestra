@@ -23,6 +23,20 @@ Route::post('/api/contact', 'App\Http\Controllers\ProductController@store');
 
 Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
         Route::get('/dashboard', 'App\Http\Controllers\AdminController@index')->name('dashboard');
+        Route::get('/categories', 'App\Http\Controllers\AdminController@categories')->name('dashboard.categories');
+        Route::get('/products', 'App\Http\Controllers\AdminController@products')->name('dashboard.products');
+        Route::post('/create-category', 'App\Http\Controllers\AdminController@createCategory')->name('dashboard.create.category');
+        Route::get('/category/{category}', 'App\Http\Controllers\AdminController@showCategory')->name('dashboard.show.category');
+        Route::delete('/delete-category/{category}', 'App\Http\Controllers\AdminController@deleteCategory')->name('dashboard.delete.category');
+        Route::post('/edit-category/{category}', 'App\Http\Controllers\AdminController@editCategory')->name('dashboard.edit.category');
+        Route::get('/edit/{slug}', 'App\Http\Controllers\AdminController@editProduct')->name('dashboard.edit.product');
+        Route::post('/update-product', 'App\Http\Controllers\AdminController@updateProduct')->name('dashboard.update.product');
+        Route::delete('/delete-product/{product}', 'App\Http\Controllers\AdminController@deleteProduct')->name('dashboard.delete.product');
+        Route::post('/create-product', 'App\Http\Controllers\AdminController@createProduct')->name('dashboard.create.product');
+        Route::get('/texts', 'App\Http\Controllers\AdminController@texts')->name('dashboard.texts');
+        Route::post('/create-texts', 'App\Http\Controllers\AdminController@createTexts')->name('dashboard.create.texts');
+        Route::post('/edit-texts', 'App\Http\Controllers\AdminController@editTexts')->name('dashboard.edit.texts');
+        
 });
 
 // Route::get('/panel/dashboard', function () {

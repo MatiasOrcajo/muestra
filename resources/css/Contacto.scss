@@ -50,7 +50,35 @@
             font-size: 35px;
         }
     }
+
+    @media(max-width: $layout-breakpoint-960){
+
+        input{
+            width: 100%;
+            height: 50px;
+            border-radius: 20px;
+            @include box-shadow;
+            padding: 10px;
+        }
+
+        button{
+            width: 100%;
+            height: 67px;
+            color: white;
+            background: $colorPrimario;
+            font-family: $Black;
+            font-size: 35px;
+        }
+    }
 }
+
+@media(max-width: $layout-breakpoint-960){
+    .formulario{
+        width: 100% !important;
+        padding: 10px;
+    }
+}
+
 
 .contacto{
     h3{
@@ -63,6 +91,23 @@
         font-family: $Medium;
         font-size: 22px;
         color: $colorPrimario;
+    }
+}
+
+
+@media(max-width: $layout-breakpoint-960){
+    .contacto{
+        h3{
+            font-family: $Black;
+            font-size: 40px;
+            color: $colorPrimario;
+            line-height: 40px;
+        }
+        p{
+            font-family: $Medium;
+            font-size: 22px;
+            color: $colorPrimario;
+        }
     }
 }
 
@@ -85,7 +130,7 @@
         
         h1 span{
             font-family: $Regular !important;
-            font-size: 19px;
+            font-size: 53px;
             color: white;
         }
         
@@ -127,6 +172,33 @@
                 color: white;
             }
         }
+    
+    }
+
+    @media(max-width: $layout-breakpoint-960){
+        .inicio{
+            font-size: 15px;
+        }
+        .contacto{
+            font-size: 15px;
+        }
+        .tarifario-title{
+            h1{
+                font-family: $Black;
+                font-size: 21px;
+                color: white;
+            }
+            
+            h1 span{
+                font-family: $Regular !important;
+                font-size: 21px;
+                color: white;
+            }
+        }
+
+        
+
+        
     
     }
       

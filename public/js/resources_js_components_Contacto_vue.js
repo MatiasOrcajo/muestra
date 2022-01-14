@@ -86,6 +86,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -123,6 +130,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    thankYou: function thankYou() {
+      var elementsToHide = document.querySelectorAll('.hide-on-click');
+      var elementsToShow = document.querySelectorAll('.show-on-click');
+      elementsToHide.forEach(function (el) {
+        el.classList.replace('hide-on-click', 'hidden');
+      });
+      elementsToShow.forEach(function (el) {
+        el.classList.replace('hidden', 'show-on-click');
+      });
     }
   }
 });
@@ -1118,12 +1135,26 @@ var render = function () {
         [
           _vm._m(0),
           _vm._v(" "),
+          _c("h3", { staticClass: "text-center hidden show-on-click" }, [
+            _vm._v("\n            MUCHAS GRACIAS\n        "),
+          ]),
+          _vm._v(" "),
           _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "p",
+            { staticClass: "text-center block mb-0 mt-5 hidden show-on-click" },
+            [
+              _vm._v(
+                "\n            Nos pondremos en contacto a la brevedad.\n        "
+              ),
+            ]
+          ),
           _vm._v(" "),
           _c(
             "form",
             {
-              staticClass: "formulario mt-12",
+              staticClass: "formulario mt-12 hide-on-click",
               on: {
                 submit: function ($event) {
                   $event.preventDefault()
@@ -1236,9 +1267,15 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _c("button", { attrs: { type: "submit" } }, [
-                _vm._v("\n                ENVIAR\n            "),
-              ]),
+              _c(
+                "button",
+                {
+                  staticClass: "my-5",
+                  attrs: { type: "submit" },
+                  on: { click: _vm.thankYou },
+                },
+                [_vm._v("\n                ENVIAR\n            ")]
+              ),
             ]
           ),
         ]
@@ -1252,7 +1289,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h3", { staticClass: "text-center" }, [
+    return _c("h3", { staticClass: "text-center hide-on-click" }, [
       _vm._v("\n            CONSULTAS\n            "),
       _c("br"),
       _vm._v("\n            Y SUGERENCIAS\n        "),
@@ -1262,13 +1299,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "text-center block mb-0 mt-5" }, [
-      _vm._v(
-        "\n            Si tenés alguna duda o sugerencia sobre la información "
-      ),
-      _c("br"),
-      _vm._v("en el sitio ponete en contacto con nosotros.\n        "),
-    ])
+    return _c(
+      "p",
+      { staticClass: "text-center block mb-0 mt-5 hide-on-click" },
+      [
+        _vm._v(
+          "\n            Si tenés alguna duda o sugerencia sobre la información "
+        ),
+        _c("br"),
+        _vm._v("en el sitio ponete en contacto con nosotros.\n        "),
+      ]
+    )
   },
 ]
 render._withStripped = true
@@ -1314,8 +1355,10 @@ var render = function () {
             },
             [
               _c("router-link", { attrs: { to: { name: "home" } } }, [
-                _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2021")])]),
+                _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2022")])]),
               ]),
+              _vm._v(" "),
+              _c("h5", [_vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2022")]),
             ],
             1
           ),
