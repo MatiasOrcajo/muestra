@@ -8,7 +8,7 @@
     @if($head)
         {!!$head!!}
     @endif
-    <title>Tarifario 2022</title>
+    <title>{{env('APP_NAME')}}</title>
 
     <!-- CDNs de Font-Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,9 +22,6 @@
     
 </head>
 <body>
-    @if($body)
-        {!!$body!!}
-    @endif
     <div id="app">
     </div>
     <script>
@@ -39,6 +36,9 @@
     </script>
     
     <script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
+    @if($body)
+        {!!$body!!}
+    @endif
 </body>
 
 </html>

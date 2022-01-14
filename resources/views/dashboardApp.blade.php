@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Azzara Bootstrap 4 Admin Dashboard</title>
+	<title>{{env('APP_NAME')}}</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	{{-- <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/> --}}
 
@@ -117,7 +117,7 @@
 				
 		
 	</div>
-</div>
+
 <!--   Core JS Files   -->
 <script src="{{asset('js/jquery.3.2.1.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\{Categories, Products, Texts, SeoGlobal};
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -27,9 +28,9 @@ class AdminController extends Controller
         $category->title = $request->title;
         $category->slug = Str::slug($request->title);
         $category->order = $request->order;
-
         $category->save();
-
+        
+        Artisan::call('sitemap:generate');
         return redirect()->back();
     }
 
@@ -42,6 +43,8 @@ class AdminController extends Controller
     public function deleteCategory(Categories $category)
     {
         $category->delete();
+        
+        Artisan::call('sitemap:generate');
         return redirect()->back();
     }
 
@@ -52,7 +55,8 @@ class AdminController extends Controller
         $category->slug = Str::slug($request->title);
         $category->order = $request->order;
         $category->save();
-
+        
+        Artisan::call('sitemap:generate');
         return redirect()->back();
     }
 
@@ -72,16 +76,17 @@ class AdminController extends Controller
         $product->A = $request->A;
         $product->B = $request->B;
         $product->C = $request->C;
-
         $product->save();
-
+        
+        Artisan::call('sitemap:generate');
         return redirect(route('dashboard.show.category', $product->categories->id));
     }
 
     public function deleteProduct(Products $product)
     {
         $product->delete();
-
+        
+        Artisan::call('sitemap:generate');
         return redirect()->back();
     }
 
@@ -97,7 +102,8 @@ class AdminController extends Controller
         $product->B = $request->B;
         $product->C = $request->C;
         $product->save();
-
+        
+        Artisan::call('sitemap:generate');
         return redirect()->back();
     }
 
