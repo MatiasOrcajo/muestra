@@ -609,6 +609,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-6 {
   width: 1.5rem;
 }
+.w-80 {
+  width: 20rem;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -1210,12 +1213,20 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 1 / span 1;
   }
 
+  .md\:mr-5 {
+    margin-right: 1.25rem;
+  }
+
   .md\:block {
     display: block;
   }
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:grid-cols-2 {

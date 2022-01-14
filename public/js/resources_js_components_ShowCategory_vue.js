@@ -1312,7 +1312,9 @@ var render = function () {
                 _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2022")])]),
               ]),
               _vm._v(" "),
-              _c("h5", [_vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2022")]),
+              _c("h5", { staticClass: "hidden" }, [
+                _vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2022"),
+              ]),
             ],
             1
           ),
@@ -1321,7 +1323,7 @@ var render = function () {
             "div",
             {
               staticClass:
-                "absolute flex mb-0 right-0 space-x-6 mr-5 right-0 mt-0",
+                "absolute flex mb-0 right-0 space-x-6 mr-2 md:mr-5 right-0 mt-0",
             },
             [
               _c("router-link", { attrs: { to: { name: "home" } } }, [

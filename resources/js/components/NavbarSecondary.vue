@@ -8,9 +8,9 @@
                 <router-link :to="{name: 'home'}">
                     <h1>TARIFARIO <span>2022</span></h1>
                 </router-link>
-                <h5>ARANCELES DE DISEÑO, ARGENTINA, 2022</h5>
+                <h5 class="hidden">ARANCELES DE DISEÑO, ARGENTINA, 2022</h5>
             </div>
-            <div class="absolute flex mb-0 right-0 space-x-6 mr-5 right-0 mt-0">
+            <div class="absolute flex mb-0 right-0 space-x-6 mr-2 md:mr-5 right-0 mt-0">
                 <router-link :to="{name: 'home'}">
                     <h6 class="inicio" >INICIO</h6>
                 </router-link>

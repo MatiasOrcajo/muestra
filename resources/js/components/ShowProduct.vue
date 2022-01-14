@@ -32,7 +32,7 @@
         </div>
 
         <div class="flex justify-center mt-12 show-product-p">
-            <p class="w-1/2 text-center">
+            <p class="w-80 md:w-1/2 text-center">
                 Si te preguntabas cuando cobrar por una tarea de diseño, o buscabas un tarifario de diseño gráfico en esta pagina encontrarás la información que buscas. <br><br>
                 Recordá que los aranceles que listamos son montos orientativos para ayudar tanto a profesionales a presupuestar y cobrar por su trabajo, como a clientes que buscan saber cuanto deberían pagar por los mismos. Cada proyecto debe ser presupuestado basado en sus requerimientos, por lo que esta lista de precios debe ser tomada como una referencia orientativa. <br><br>
                 Esperamos que te sea de utilidad.

@@ -5,7 +5,7 @@
             ?
             </button>
         </div>
-        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+        <div class="dropdown-menu texto" id="dropdown-menu4" role="menu">
             <div class="dropdown-content">
                 <div class="dropdown-item">
                     <p>{{text}}</p>

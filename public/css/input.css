@@ -231,14 +231,18 @@
   }
   .navbar-secondary .tarifario-title h1 {
     font-family: "Montserrat-Black", sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     color: white;
   }
   .navbar-secondary .tarifario-title h1 span {
     font-family: "Montserrat-Regular", sans-serif !important;
-    font-size: 21px;
+    font-size: 18px;
     color: white;
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .padding-x-responsive {
@@ -439,5 +443,10 @@
     font-size: 30px;
     min-width: 95%;
     min-height: 50px;
+  }
+}
+@media (max-width: 960px) {
+  .texto {
+    transform: translateX(-5rem);
   }
 }
