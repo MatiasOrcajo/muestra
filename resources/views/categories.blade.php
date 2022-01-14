@@ -69,12 +69,8 @@
                                         <input type="text" name="title" class="form-control" value="{{$category->title}}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="">Slug</label>
-                                        <input type="text" name="slug" class="form-control" value="{{$category->slug}}">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="">Orden</label>
-                                        <input type="number" name="order" class="form-control" value="{{$category->order}}">
+                                        <input type="number" name="order" class="form-control" min="1" max="999" value="{{$category->order}}">
                                     </div>
 
                                     <div class="modal-footer">
@@ -116,13 +112,12 @@
           <form action="{{route('dashboard.create.category')}}" method="POST">
             @csrf
             <div class="form-group">
-                <input type="text" name="title" class="form-control" placeholder="Titulo">
+                <label for="title2"> Titulo </label>
+                <input type="text" id="title2" name="title" class="form-control" placeholder="Titulo">
             </div>
             <div class="form-group">
-                <input type="text" name="slug" class="form-control" placeholder="Slug">
-            </div>
-            <div class="form-group">
-                <input type="number" name="order" class="form-control" placeholder="01">
+                <label for="orden2"> Orden </label>
+                <input type="number" id="orden2" name="order"  min="1" max="999" class="form-control" placeholder="">
             </div>
             <button type="submit" class="btn btn-primary">Save changes</button>
           </form>

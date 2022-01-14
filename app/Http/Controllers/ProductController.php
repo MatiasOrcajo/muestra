@@ -14,7 +14,6 @@ class ProductController extends Controller
     public function index()
     {
         $categories = Categories::with('products')->orderBy('order')->get();
-        dd($categories);
         return response()->json($categories);
     }
 

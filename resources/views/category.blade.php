@@ -74,10 +74,6 @@
                     <input type="text" class="form-control" name="subtitle">
                 </div>
                 <div class="form-group m-0">
-                    <label for="">Slug</label>
-                    <input type="text" class="form-control" name="slug">
-                </div>
-                <div class="form-group m-0">
                     <label for="">Cliente A</label>
                     <input type="text" class="form-control" name="A">
                 </div>

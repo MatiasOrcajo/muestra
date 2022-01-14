@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\{Categories, Products, Texts};
+use Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
@@ -24,7 +25,7 @@ class AdminController extends Controller
     {
         $category = new Categories;
         $category->title = $request->title;
-        $category->slug = $request->slug;
+        $category->slug = Str::slug($request->title);
         $category->order = $request->order;
 
         $category->save();
@@ -48,7 +49,7 @@ class AdminController extends Controller
     {
         // dd($category, $request->title);
         $category->title = $request->title;
-        $category->slug = $request->slug;
+        $category->slug = Str::slug($request->title);
         $category->order = $request->order;
         $category->save();
 
@@ -67,7 +68,7 @@ class AdminController extends Controller
 
         $product->title = $request->title;
         $product->subtitle = $request->subtitle;
-        $product->slug = $request->slug;
+        $product->slug = Str::slug($request->title);
         $product->A = $request->A;
         $product->B = $request->B;
         $product->C = $request->C;
@@ -91,7 +92,7 @@ class AdminController extends Controller
         $product->category_id = $request->category_id;
         $product->title = $request->title;
         $product->subtitle = $request->subtitle;
-        $product->slug = $request->slug;
+        $product->slug = Str::slug($request->title);
         $product->A = $request->A;
         $product->B = $request->B;
         $product->C = $request->C;
