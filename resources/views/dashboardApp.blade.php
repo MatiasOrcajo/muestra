@@ -47,6 +47,9 @@
 						<a href="{{route('dashboard.texts')}}" class="mr-4" style="color: white;">
 							Textos
 						</a>
+						<a href="{{route('dashboard.seo')}}" class="mr-4" style="color: white;">
+							SEO
+						</a>
 					</div>
 			</div>
 		</div>
@@ -91,6 +94,12 @@
 							<a href="{{route('dashboard.texts')}}">
 								<i class="fas fa-layer-group"></i>
 								<p>Textos</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{route('dashboard.seo')}}">
+								<i class="fas fa-layer-group"></i>
+								<p>SEO</p>
 							</a>
 						</li>
 					</ul>

@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {{-- @dd(url('/')) --}}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @if($head)
+        {!!$head!!}
+    @endif
     <title>Tarifario 2022</title>
 
     <!-- CDNs de Font-Awesome -->
@@ -18,6 +22,9 @@
     
 </head>
 <body>
+    @if($body)
+        {!!$body!!}
+    @endif
     <div id="app">
     </div>
     <script>

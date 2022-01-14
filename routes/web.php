@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Mail\ContactoMailable;
+use App\Models\SeoGlobal;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,8 @@ Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
         Route::get('/texts', 'App\Http\Controllers\AdminController@texts')->name('dashboard.texts');
         Route::post('/create-texts', 'App\Http\Controllers\AdminController@createTexts')->name('dashboard.create.texts');
         Route::post('/edit-texts', 'App\Http\Controllers\AdminController@editTexts')->name('dashboard.edit.texts');
+        Route::get('/seo', 'App\Http\Controllers\AdminController@seoGlobal')->name('dashboard.seo');
+        Route::post('/add-seo', 'App\Http\Controllers\AdminController@addSeoGlobal')->name('dashboard.add.seo');
         
 });
 
@@ -46,7 +49,11 @@ Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
 require __DIR__.'/auth.php';
 
 Route::get('{any}', function(){
-    return view('app');
+    $seo = SeoGlobal::first();
+    $head = $seo->head;
+    $body = $seo->body;
+
+    return view('app', compact('head', 'body'));
 })->where('any', '.*');
 
 

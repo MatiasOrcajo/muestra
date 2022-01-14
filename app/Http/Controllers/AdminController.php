@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\{Categories, Products, Texts};
+use App\Models\{Categories, Products, Texts, SeoGlobal};
 use Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -139,5 +139,24 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function seoGlobal()
+    {
+        $seo = SeoGlobal::first();
+        $head = $seo->head;
+        $body = $seo->body;
+
+        return view('seo', compact('head', 'body'));
+    }
+
+    public function addSeoGlobal(Request $request)
+    {
+        $seo = SeoGlobal::first();
+        $seo->head = $request->head;
+        $seo->body = $request->body;
+
+        $seo->save();
+
+        return redirect()->back();
+    }
 
 }
