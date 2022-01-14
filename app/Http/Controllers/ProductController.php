@@ -43,7 +43,7 @@ class ProductController extends Controller
     {
         
         $correo = new ContactoMailable($request->all());
-        Mail::to('matiasorcajo3@gmail.com')->send($correo);
+        Mail::to(env('MAIL_USERNAME'))->send($correo);
 
         return "Mensaje Enviado";
     }
