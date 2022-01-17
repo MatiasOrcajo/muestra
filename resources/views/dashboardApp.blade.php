@@ -62,7 +62,7 @@
 				<div class="sidebar-content">
 					<div class="user">
 						<div class="info">
-							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<a data-toggle="collapse" href="#!" aria-expanded="true">
 								<span>
 									{{Auth::user()->name}}
 									<span class="user-level">Administrador</span>
