@@ -1380,7 +1380,9 @@ var staticRenderFns = [
       [
         _c("h1", [_vm._v("TARIFARIO "), _c("span", [_vm._v("2022")])]),
         _vm._v(" "),
-        _c("h5", [_vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2021")]),
+        _c("h5", { staticClass: "px-5" }, [
+          _vm._v("ARANCELES DE DISEÑO, ARGENTINA, 2022"),
+        ]),
       ]
     )
   },
