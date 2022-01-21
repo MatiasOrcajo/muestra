@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\{Categories, Products, Texts, SeoGlobal};
+use App\Models\{Categories, Products, Texts, SeoGlobal, Subcategories};
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;
 
@@ -36,8 +36,8 @@ class AdminController extends Controller
 
     public function showCategory(Categories $category)
     {
-        $products = $category->products;
-        return view('category', compact('products', 'category'));
+        $subcategories = $category->subcategories;
+        return view('category', compact('subcategories', 'category'));
     }
 
     public function deleteCategory(Categories $category)
@@ -46,6 +46,11 @@ class AdminController extends Controller
         
         Artisan::call('sitemap:generate');
         return redirect()->back();
+    }
+
+    public function showSubcategory(Subcategories $subcategory)
+    {
+        return view('subcategory', compact('subcategory'));
     }
 
     public function editCategory(Request $request, Categories $category)
@@ -58,6 +63,31 @@ class AdminController extends Controller
         
         Artisan::call('sitemap:generate');
         return redirect()->back();
+    }
+
+    public function createSubcategory(Request $request)
+    {
+        $subcategory = new Subcategories;
+        $subcategory->title = $request->title;
+        $subcategory->category_id = $request->category_id;
+
+        $subcategory->save();
+
+        return redirect()->back();
+    }
+
+    public function deleteSubcategory(Subcategories $subcategory)
+    {
+        $subcategory->delete();
+
+        Artisan::call('sitemap:generate');
+        return redirect()->back();
+    }
+
+    public function editSubcategory(Subcategories $subcategery)
+    {
+        $subcategory = Subcategories::where('id', $request->id)->first();
+        return view('editSubcategory', compact('subcategory'));
     }
 
     public function editProduct($slug)
@@ -79,7 +109,7 @@ class AdminController extends Controller
         $product->save();
         
         Artisan::call('sitemap:generate');
-        return redirect(route('dashboard.show.category', $product->categories->id));
+        return redirect(route('dashboard.show.subcategory', $product->subcategories->id));
     }
 
     public function deleteProduct(Products $product)
@@ -94,7 +124,7 @@ class AdminController extends Controller
     {
         $product = new Products;
 
-        $product->category_id = $request->category_id;
+        $product->subcategory_id = $request->subcategory_id;
         $product->title = $request->title;
         $product->subtitle = $request->subtitle;
         $product->slug = Str::slug($request->title);

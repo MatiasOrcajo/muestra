@@ -7,14 +7,25 @@ use App\Mail\ContactoMailable;
 use Illuminate\Support\Facades\Mail;
 
 
-use App\Models\{Categories, Products, Texts};
+use App\Models\{Categories, Products, Texts, Subcategories};
 
 class ProductController extends Controller
 {
     public function index()
     {
-        $categories = Categories::with('products')->orderBy('order')->get();
-        return response()->json($categories);
+        $categories = Categories::orderBy('order')->get();
+        $subcategories = [];
+        $data = Subcategories::with('products')->get();
+        foreach ($data as $subcategory) {
+            $subcategories[] = $subcategory;
+        }
+
+        $object = [
+            "categories"=>$categories,
+            "subcategories"=>$subcategories
+        ];
+
+        return response()->json($object);
     }
 
     public function getCategories()
@@ -25,8 +36,19 @@ class ProductController extends Controller
 
     public function showCategory($slug)
     {
-        $category = Categories::where('slug', $slug)->with('products')->first();
-        return response()->json($category);
+        $category = Categories::where('slug', $slug)->first();
+
+        $subcategories = [];
+        $data = Subcategories::with('products')->get();
+        foreach ($data as $subcategory) {
+            $subcategories[] = $subcategory;
+        }
+
+        $object = [
+            "category"=>$category,
+            "subcategories"=>$subcategories
+        ];
+        return response()->json($object);
     }
 
     public function showProduct($slug)

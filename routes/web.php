@@ -40,6 +40,12 @@ Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
         Route::get('/seo', 'App\Http\Controllers\AdminController@seoGlobal')->name('dashboard.seo');
         Route::post('/add-seo', 'App\Http\Controllers\AdminController@addSeoGlobal')->name('dashboard.add.seo');
         Route::get('/logout', 'App\Http\Controllers\AdminController@logout')->name('dashboard.logout');
+
+        // subcategorias
+
+        Route::get('/subcategory/{subcategory}', 'App\Http\Controllers\AdminController@showSubcategory')->name('dashboard.show.subcategory');
+        Route::post('/create-subcategory', 'App\Http\Controllers\AdminController@createSubcategory')->name('dashboard.create.subcategory');
+
         
 });
 

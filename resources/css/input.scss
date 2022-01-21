@@ -95,14 +95,7 @@ body{
 
 // navbar
 
-
-.cuadro-categoria{
-  
-  .barra-descripcion{
-    background-color: $colorPrimario;
-    border-radius: 17px 17px 0 0;
-  }
-
+.subcategory{
   .cuadro-producto{
     transition: ease .3s;
   }
@@ -113,12 +106,27 @@ body{
   }
 
   .cuadro-producto:last-child{
-    border-radius: 0 0 17px 17px;
+    border-radius: 5px;
+  }
+}
+
+
+.cuadro-categoria{
+  
+  .barra-descripcion{
+    background-color: $colorPrimario;
+    border-radius: 17px 17px 0 0;
   }
 
   .category-title{
     font-family: $Bold;
-    font-size: 34px;
+    font-size: 38px;
+    color: $colorCategory;
+  }
+
+  .subcategory-title{
+    font-family: $Bold;
+    font-size: 25px;
     color: $colorCategory;
   }
 

@@ -247,11 +247,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       slug: this.$route.params.slug,
-      category: []
+      category: [],
+      subcategories: []
     };
   },
   watch: {
@@ -259,9 +267,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.slug = this.$route.params.slug;
       this.loadCategory();
     }
-  },
-  created: function created() {
-    this.loadCategory();
   },
   methods: {
     loadCategory: function loadCategory() {
@@ -274,7 +279,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return _this.axios.get(routes['category-showCategory'] + '/' + _this.slug).then(function (res) {
-                  _this.category = res.data;
+                  _this.category = res.data.category;
+                  _this.subcategories = res.data.subcategories;
                 })["catch"](function (err) {
                   console.log(err);
                 });
@@ -287,6 +293,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     }
+  },
+  computed: {
+    getNodes: function getNodes() {
+      var nodes = document.querySelectorAll('div');
+      console.log(nodes);
+    }
+  },
+  created: function created() {
+    this.loadCategory();
+    this.getNodes;
   }
 });
 
@@ -1445,134 +1461,184 @@ var render = function () {
           _vm._v(_vm._s(_vm.category.title)),
         ]),
         _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._l(_vm.category.products, function (product, index) {
+        _vm._l(_vm.subcategories, function (subcategory) {
           return _c(
             "div",
-            {
-              key: product.id,
-              staticClass: "p-4 grid grid-cols-12 cuadro-producto",
-              staticStyle: { "box-shadow": "0 0 13px #00000029" },
-              style:
-                index % 2 == 0 ? "background: white" : "background: #F5F5F5",
-            },
+            { key: subcategory.id },
             [
-              _c(
-                "div",
-                { staticClass: "col-span-6 md:col-span-5" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "py-0 flex items-center",
-                      attrs: {
-                        to: {
-                          name: "showProduct",
-                          params: { slug: product.slug },
-                        },
-                      },
-                    },
-                    [
-                      _c(
-                        "h1",
-                        {
-                          staticClass: "bold-title",
-                          staticStyle: { color: "#131F3E" },
-                        },
-                        [_vm._v(_vm._s(product.title))]
-                      ),
-                    ]
-                  ),
-                ],
-                1
-              ),
+              subcategory.category_id == _vm.category.id
+                ? _c("div", [
+                    _c(
+                      "span",
+                      { staticClass: "subcategory-title my-5 block" },
+                      [_vm._v(_vm._s(subcategory.title))]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(0, true),
+                  ])
+                : _vm._e(),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-3 md:col-span-3 flex items-center align-center",
-                },
-                [
-                  product.subtitle
+              _vm._l(subcategory.products, function (value, key) {
+                return _c("div", { key: key }, [
+                  subcategory.category_id == _vm.category.id
                     ? _c(
-                        "h1",
+                        "div",
                         {
-                          staticClass: "aclaracion-title",
-                          staticStyle: { color: "#131F3E" },
+                          staticClass: "subcategory",
+                          staticStyle: { "box-shadow": "0 0 13px #00000029" },
+                          style:
+                            key % 2 == 0
+                              ? "background: white"
+                              : "background: #F5F5F5",
                         },
-                        [_vm._v(_vm._s(product.subtitle))]
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "p-4 grid grid-cols-12 cuadro-producto",
+                              staticStyle: {
+                                "box-shadow": "0 0 13px #00000029",
+                              },
+                              style:
+                                key % 2 == 0
+                                  ? "background: white"
+                                  : "background: #F5F5F5",
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "col-span-6 md:col-span-5" },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "py-0 flex items-center",
+                                      attrs: {
+                                        to: {
+                                          name: "showProduct",
+                                          params: { slug: value.slug },
+                                        },
+                                      },
+                                    },
+                                    [
+                                      _c(
+                                        "h1",
+                                        {
+                                          staticClass: "bold-title",
+                                          staticStyle: { color: "#131F3E" },
+                                        },
+                                        [_vm._v(_vm._s(value.title))]
+                                      ),
+                                    ]
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-span-3 md:col-span-3 flex items-center align-center",
+                                },
+                                [
+                                  value.subtitle
+                                    ? _c(
+                                        "h1",
+                                        {
+                                          staticClass: "aclaracion-title",
+                                          staticStyle: { color: "#131F3E" },
+                                        },
+                                        [_vm._v(_vm._s(value.subtitle))]
+                                      )
+                                    : _vm._e(),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
+                                  staticStyle: { color: "#131F3E" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                    $" +
+                                      _vm._s(value.A) +
+                                      "\n                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
+                                  staticStyle: { color: "#131F3E" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                    $" +
+                                      _vm._s(value.B) +
+                                      "\n                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
+                                  staticStyle: { color: "#131F3E" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                    $" +
+                                      _vm._s(value.C) +
+                                      "\n                "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "hidden md:block col-span-2 md:col-span-1 flex items-center justify-center",
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      staticClass: "consultar-title",
+                                      staticStyle: {
+                                        "text-decoration": "underline",
+                                        color: "#131F3E",
+                                      },
+                                      attrs: { to: { name: "contacto" } },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                      Consultar\n                    "
+                                      ),
+                                    ]
+                                  ),
+                                ],
+                                1
+                              ),
+                            ]
+                          ),
+                        ]
                       )
                     : _vm._e(),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
-                  staticStyle: { color: "#131F3E" },
-                },
-                [
-                  _vm._v(
-                    "\n                " + _vm._s(product.A) + "\n            "
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
-                  staticStyle: { color: "#131F3E" },
-                },
-                [
-                  _vm._v(
-                    "\n                " + _vm._s(product.B) + "\n            "
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "col-span-1 md:col-span-1 flex items-center justify-center bold-title",
-                  staticStyle: { color: "#131F3E" },
-                },
-                [
-                  _vm._v(
-                    "\n                " + _vm._s(product.C) + "\n            "
-                  ),
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "hidden md:block col-span-2 md:col-span-1 flex items-center justify-center",
-                },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "consultar-title",
-                      staticStyle: {
-                        "text-decoration": "underline",
-                        color: "#131F3E",
-                      },
-                      attrs: { to: { name: "contacto" } },
-                    },
-                    [_vm._v("\n                Consultar\n              ")]
-                  ),
-                ],
-                1
-              ),
-            ]
+                ])
+              }),
+            ],
+            2
           )
         }),
       ],
@@ -1604,31 +1670,31 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("div", { staticClass: "col-span-1 md:col-span-1 bold-title" }, [
           _c("div", { staticClass: "hidden md:block bold-title" }, [
-            _vm._v("\n              CLIENTE A\n            "),
+            _vm._v("\n                  CLIENTE A\n                "),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "block md:hidden bold-title" }, [
-            _vm._v("\n              A\n            "),
+            _vm._v("\n                  A\n                "),
           ]),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-span-1 md:col-span-1 bold-title" }, [
           _c("div", { staticClass: "hidden md:block bold-title" }, [
-            _vm._v("\n              CLIENTE B\n            "),
+            _vm._v("\n                  CLIENTE B\n                "),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "block md:hidden bold-title" }, [
-            _vm._v("\n              B\n            "),
+            _vm._v("\n                  B\n                "),
           ]),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-span-1 md:col-span-1 bold-title" }, [
           _c("div", { staticClass: "hidden md:block bold-title" }, [
-            _vm._v("\n              CLIENTE C\n            "),
+            _vm._v("\n                  CLIENTE C\n                "),
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "block md:hidden bold-title" }, [
-            _vm._v("\n              C\n            "),
+            _vm._v("\n                  C\n                "),
           ]),
         ]),
         _vm._v(" "),

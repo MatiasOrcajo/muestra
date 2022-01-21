@@ -37,7 +37,7 @@
                 Guardar Cambios
             </button>
             
-            <a href="{{route('dashboard.show.category', $product->categories->id)}}">
+            <a href="{{route('dashboard.show.category', $product->subcategories->id)}}">
                 <button type="button" class="btn btn-danger my-2">
                     Descartar
                 </button>
