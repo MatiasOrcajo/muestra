@@ -29,6 +29,7 @@ Route::group(['prefix' => '/panel','middleware' => ['auth']], function(){
         Route::post('/create-category', 'App\Http\Controllers\AdminController@createCategory')->name('dashboard.create.category');
         Route::get('/category/{category}', 'App\Http\Controllers\AdminController@showCategory')->name('dashboard.show.category');
         Route::delete('/delete-category/{category}', 'App\Http\Controllers\AdminController@deleteCategory')->name('dashboard.delete.category');
+        Route::delete('/delete-subcategory/{subcategory}', 'App\Http\Controllers\AdminController@deleteSubcategory')->name('dashboard.delete.subcategory');
         Route::post('/edit-category/{category}', 'App\Http\Controllers\AdminController@editCategory')->name('dashboard.edit.category');
         Route::get('/edit/{slug}', 'App\Http\Controllers\AdminController@editProduct')->name('dashboard.edit.product');
         Route::post('/update-product', 'App\Http\Controllers\AdminController@updateProduct')->name('dashboard.update.product');

@@ -143,7 +143,7 @@
                                     <button type="button" class="btn btn-primary">
                                         Volver
                                     </button>
-                                    <form action="{{route('dashboard.delete.category', $subcategory->id)}}" method="POST">
+                                    <form action="{{route('dashboard.delete.subcategory', $subcategory->id)}}" method="POST">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-danger">
