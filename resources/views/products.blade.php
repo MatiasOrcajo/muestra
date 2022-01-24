@@ -7,11 +7,13 @@
             <table class="table">
                 <thead>
                   <tr>
+                    <th scope="col"></th>
                     <th scope="col">Descripción</th>
                     <th scope="col">Aclaración</th>
                     <th scope="col">Cliente A</th>
                     <th scope="col">Cliente B</th>
                     <th scope="col">Cliente C</th>
+                    <th scope="col">Subcategoría</th>
                     <th scope="col">Categoria</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
@@ -20,12 +22,14 @@
                 <tbody>
                     @forelse ($products as $product)
                         <tr>
+                            <th>{{$loop->iteration}}</th> 
                             <th>{{$product->title}}</th> 
                             <th>{{$product->subtitle}}</th>
                             <th>{{$product->A}}</th>
                             <th>{{$product->B}}</th> 
                             <th>{{$product->C}}</th>
-                            <th>{{$product->categories->title}}</th>
+                            <th>{{$product->subcategories->title}}</th>
+                            <th>{{$product->subcategories->category->title}}</th>
                             <th><a href="{{route('dashboard.edit.product', $product->slug)}}">Editar</a></th>
                             <th>
                                 <form action="{{route('dashboard.delete.product', $product->id)}}" method="POST">

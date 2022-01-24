@@ -15,10 +15,6 @@
                 <input type="text" class="form-control" name="subtitle" value="{{$product->subtitle}}">
             </div>
             <div class="form-group m-0">
-                <label for="">Slug</label>
-                <input type="text" class="form-control" name="slug" value="{{$product->slug}}">
-            </div>
-            <div class="form-group m-0">
                 <label for="">Cliente A</label>
                 <input type="text" class="form-control" name="A" value="{{$product->A}}">
             </div>

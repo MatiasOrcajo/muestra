@@ -139,7 +139,7 @@ class AdminController extends Controller
 
     public function products()
     {
-        $products = Products::all();
+        $products = Products::orderBy('id')->get();
         return view('products', compact('products'));
     }
 

@@ -18,4 +18,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+    <url>
+        <loc>http://127.0.0.1:8000/categoria/hgjkghjk</loc>
+        <lastmod>2022-01-24T12:35:55+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 </urlset>
