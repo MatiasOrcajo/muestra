@@ -1,27 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    <url>
-        <loc>http://127.0.0.1:8000/categoria/categoria</loc>
-        <lastmod>2022-01-20T18:48:57+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://127.0.0.1:8000/categoria/dsadf</loc>
-        <lastmod>2022-01-20T18:48:57+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://127.0.0.1:8000/categoria/fghdfgdf</loc>
-        <lastmod>2022-01-20T18:48:57+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>http://127.0.0.1:8000/categoria/hgjkghjk</loc>
-        <lastmod>2022-01-24T12:35:55+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
 </urlset>
